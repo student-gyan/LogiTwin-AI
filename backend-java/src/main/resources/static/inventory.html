@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Logi Twin AI inventory health workspace" />
+    <title>Inventory Health | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Planning</span><b>›</b><strong>Inventory health</strong>
+          </div>
+          <div class="top-actions">
+            <label class="search"
+              ><input id="search" placeholder="Search items or cities..."
+            /></label>
+            <div class="avatar">AM</div>
+            <div class="user">
+              <strong>Alex Morgan</strong><small>Network lead</small>
+            </div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Inventory health / live</div>
+              <h1>Know what is<br /><span>safe to promise.</span></h1>
+              <p>
+                Monitor stock cover, reorder risk, and city-level availability while the
+                Mumbai port closure changes inbound delivery timing.
+              </p>
+            </div>
+            <button class="primary" id="simulate">↻ Refresh inventory</button>
+          </div>
+
+          <div class="kpis">
+            <div class="kpi dark">
+              <label>NETWORK STOCK COVER</label>
+              <strong>11.4d</strong>
+              <small>Weighted average across locations</small>
+            </div>
+            <div class="kpi mint">
+              <label>AVAILABLE UNITS</label>
+              <strong>24,680</strong>
+              <small>+8.2% vs. last week</small>
+            </div>
+            <div class="kpi coral">
+              <label>REORDER RISK</label>
+              <strong>06</strong>
+              <small>Items below safety stock</small>
+            </div>
+            <div class="kpi blue">
+              <label>INBOUND COVER</label>
+              <strong>72%</strong>
+              <small>Inbound orders on schedule</small>
+            </div>
+          </div>
+
+          <div class="workspace-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">STOCK POSITION</div>
+                  <h2>Items that need a decision</h2>
+                </div>
+                <button class="outline">Filter⌄</button>
+              </div>
+              <div class="report-row" data-search="Insulin pens Delhi critical">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>Insulin pens</strong>
+                  <small>Delhi NCR · 5.8 days cover · 2,460 units</small>
+                </div>
+                <span class="status risk">Reorder now</span>
+              </div>
+              <div class="report-row" data-search="Lithium cells Bengaluru elevated">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>Lithium cells</strong>
+                  <small>Bengaluru · 9.2 days cover · 5,820 units</small>
+                </div>
+                <span class="status watch">Watch</span>
+              </div>
+              <div class="report-row" data-search="Cold chain kits Pune balanced">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>Cold-chain kits</strong>
+                  <small>Pune · 13.4 days cover · 4,180 units</small>
+                </div>
+                <span class="status good">Balanced</span>
+              </div>
+              <div class="report-row" data-search="Industrial parts Hyderabad critical">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>Industrial parts</strong>
+                  <small>Hyderabad · 6.4 days cover · 1,920 units</small>
+                </div>
+                <span class="status risk">Reorder now</span>
+              </div>
+            </section>
+
+            <section class="panel recommend">
+              <div class="panel-label">AI INVENTORY ACTION</div>
+              <h2>Protect insulin supply</h2>
+              <p>
+                Reserve 1,800 units from the Mundra inbound order and prioritize rail
+                capacity to Delhi NCR before the current 5.8-day cover is exhausted.
+              </p>
+              <div class="recommend-stats">
+                <div><span>Units protected</span><strong>1,800</strong></div>
+                <div><span>Days gained</span><strong>+4.2d</strong></div>
+                <div><span>Loss avoided</span><strong>$42k</strong></div>
+              </div>
+              <button class="primary" id="approve">Approve inventory action ✓</button>
+            </section>
+          </div>
+
+          <div class="section">
+            <div class="eyebrow">Location coverage</div>
+            <h2>Inventory by city</h2>
+            <div class="panel table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>City</th>
+                    <th>Available units</th>
+                    <th>Days cover</th>
+                    <th>Inbound</th>
+                    <th>Safety stock</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Delhi NCR</strong><small>North region</small></td>
+                    <td>8,420</td>
+                    <td>5.8 days</td>
+                    <td>2,600 units</td>
+                    <td>7,500 units</td>
+                    <td><span class="status risk">Below safety</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bengaluru</strong><small>South region</small></td>
+                    <td>6,840</td>
+                    <td>9.2 days</td>
+                    <td>3,400 units</td>
+                    <td>6,100 units</td>
+                    <td><span class="status watch">Elevated</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pune</strong><small>West region</small></td>
+                    <td>5,920</td>
+                    <td>13.4 days</td>
+                    <td>1,800 units</td>
+                    <td>4,400 units</td>
+                    <td><span class="status good">Healthy</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hyderabad</strong><small>South-central</small></td>
+                    <td>3,500</td>
+                    <td>6.4 days</td>
+                    <td>2,100 units</td>
+                    <td>3,900 units</td>
+                    <td><span class="status risk">Below safety</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="footer">
+            <span>Inventory model refreshed 06:10 UTC</span>
+            <span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/inventory.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reports | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb"><span>Workspace</span><b>›</b><strong>Reports</strong></div>
+          <div class="top-actions">
+            <label class="search"
+              ><input id="search" placeholder="Search reports..."
+            /></label>
+            <div class="avatar">AM</div>
+            <div class="user">
+              <strong>Alex Morgan</strong><small>Network lead</small>
+            </div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Decision history</div>
+              <h1>Reports that keep<br /><span>the network honest.</span></h1>
+              <p>
+                Review disruption outcomes, demand forecasts, route decisions, and
+                avoided-loss performance from one operational record.
+              </p>
+            </div>
+            <button class="primary" id="generate">▤ Generate report</button>
+          </div>
+          <div class="kpis">
+            <div class="kpi dark">
+              <label>REPORTS THIS MONTH</label><strong>28</strong
+              ><small>+6 vs last month</small>
+            </div>
+            <div class="kpi mint">
+              <label>DECISIONS RECORDED</label><strong>146</strong
+              ><small>91% with measured outcome</small>
+            </div>
+            <div class="kpi coral">
+              <label>AVOIDED LOSS</label><strong>$248k</strong
+              ><small>Approved interventions</small>
+            </div>
+            <div class="kpi blue">
+              <label>DATA CONFIDENCE</label><strong>94.6%</strong
+              ><small>18 connected feeds</small>
+            </div>
+          </div>
+          <div class="workspace-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">REPORT LIBRARY</div>
+                  <h2>Recent reports</h2>
+                </div>
+                <button class="outline">Filter</button>
+              </div>
+              <div
+                class="report-row"
+                data-search="Mumbai closure impact report disruption"
+              >
+                <div class="file-icon">▤</div>
+                <div class="report-main">
+                  <strong>Mumbai closure impact report</strong
+                  ><small>Disruption analysis · Alex Morgan</small>
+                </div>
+                <span class="status good">Ready</span><button class="outline">•••</button>
+              </div>
+              <div
+                class="report-row"
+                data-search="Inland delivery service review network"
+              >
+                <div class="file-icon">▤</div>
+                <div class="report-main">
+                  <strong>Inland delivery service review</strong
+                  ><small>Network performance · Priya Shah</small>
+                </div>
+                <span class="status good">Ready</span><button class="outline">•••</button>
+              </div>
+              <div class="report-row" data-search="Demand coverage forecast planning">
+                <div class="file-icon">▤</div>
+                <div class="report-main">
+                  <strong>Demand coverage forecast</strong
+                  ><small>Planning signal · Logi Twin AI</small>
+                </div>
+                <span class="status watch">Processing</span
+                ><button class="outline">•••</button>
+              </div>
+              <div class="report-row" data-search="Q3 avoided loss summary executive">
+                <div class="file-icon">▤</div>
+                <div class="report-main">
+                  <strong>Q3 avoided-loss summary</strong
+                  ><small>Executive summary · Finance operations</small>
+                </div>
+                <span class="status good">Ready</span><button class="outline">•••</button>
+              </div>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">REPORTING HEALTH</div>
+                  <h2>Operational value</h2>
+                </div>
+              </div>
+              <div class="insight">
+                <strong>94.6%</strong>
+                <p>
+                  of network decisions are backed by a traceable scenario, route, or
+                  demand report.
+                </p>
+                <div class="bar"><i style="width: 94.6%"></i></div>
+              </div>
+              <div class="report-row">
+                <div class="report-main">
+                  <strong>Average report time</strong>
+                </div>
+                <strong>42 sec</strong>
+              </div>
+              <div class="report-row">
+                <div class="report-main">
+                  <strong>Scenario assumptions</strong>
+                </div>
+                <strong>18 live</strong>
+              </div>
+            </section>
+          </div>
+          <div class="notice">
+            ✓ <span>Reports are synced with the latest scenario data</span
+            ><button>Dismiss</button>
+          </div>
+          <div class="footer">
+            <span>Reports refresh when a scenario is approved</span
+            ><span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Routes | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Operations</span><b>›</b><strong>Route planner</strong>
+          </div>
+          <div class="top-actions"><div class="avatar">AM</div></div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Fleet & routes / optimized</div>
+              <h1>Put every mile<br /><span>to work.</span></h1>
+              <p>
+                Compare route time, cost, capacity, and protected orders before
+                dispatching a mitigation plan.
+              </p>
+            </div>
+            <button class="primary" id="simulate">↯ Run route simulation</button>
+          </div>
+          <div class="workspace-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">SCENARIO INPUTS</div>
+                  <h2>Build a route scenario</h2>
+                </div>
+              </div>
+              <div class="settings-field">
+                <div><strong>Origin</strong><small>Mumbai Port · IN-MUM</small></div>
+                <select>
+                  <option>Mumbai Port · IN-MUM</option>
+                  <option>Pune DC · IN-PUN</option>
+                </select>
+              </div>
+              <div class="settings-field">
+                <div><strong>Destination</strong><small>Delhi NCR · IN-NCR</small></div>
+                <select>
+                  <option>Delhi NCR · IN-NCR</option>
+                  <option>Bengaluru DC · IN-BLR</option>
+                </select>
+              </div>
+              <div class="settings-field">
+                <div>
+                  <strong>Disruption duration</strong
+                  ><small>Closure duration for the simulation</small>
+                </div>
+                <select>
+                  <option>48 hours</option>
+                  <option>24 hours</option>
+                  <option>72 hours</option>
+                </select>
+              </div>
+              <div class="settings-field">
+                <div>
+                  <strong>Priority objective</strong
+                  ><small>How the twin ranks recommendations</small>
+                </div>
+                <select>
+                  <option>Lowest delivery loss</option>
+                  <option>Shortest time</option>
+                  <option>Lowest cost</option>
+                </select>
+              </div>
+            </section>
+            <section class="panel recommend">
+              <div class="panel-label">AI RECOMMENDATION</div>
+              <h2>Split via Mundra + rail</h2>
+              <p>
+                Protect the highest-priority inland flow through the alternate hub, then
+                allocate rail capacity to Delhi NCR and Bengaluru.
+              </p>
+              <div class="recommend-stats">
+                <div><span>Delay</span><strong>+2d 04h</strong></div>
+                <div><span>Cost</span><strong>$18.4k</strong></div>
+                <div><span>Protected</span><strong>94%</strong></div>
+              </div>
+              <button class="primary" id="approve">Approve route plan ✓</button>
+            </section>
+          </div>
+          <div class="section">
+            <div class="eyebrow">Route comparison</div>
+            <h2>Every option, one decision.</h2>
+            <div class="panel table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Option</th>
+                    <th>Delay</th>
+                    <th>Cost</th>
+                    <th>Protected</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Split via Mundra + rail</strong></td>
+                    <td>+2d 04h</td>
+                    <td>$18.4k</td>
+                    <td>4,820</td>
+                    <td><span class="status good">Best fit</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Divert via Chennai + rail</strong></td>
+                    <td>+3d 00h</td>
+                    <td>$27.0k</td>
+                    <td>4,100</td>
+                    <td><span class="status watch">Backup</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Wait for Mumbai reopening</strong></td>
+                    <td>+6d 12h</td>
+                    <td>$0</td>
+                    <td>1,850</td>
+                    <td><span class="status risk">High loss</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="footer">
+            <span>Route scores update from current scenario inputs</span
+            ><span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/routes.js"></script>
+</body>
+</html>

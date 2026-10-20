@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Exact delivery date prediction engine" />
+    <title>Exact Delivery Dates | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Operations</span><b>›</b>
+            <strong>Exact delivery dates</strong>
+          </div>
+          <div class="top-actions">
+            <label class="search">
+              <input id="search" placeholder="Search shipment or city..." />
+            </label>
+            <a class="role-login" href="login.html"
+              ><span>⇥</span> <strong>Role login</strong></a
+            >
+            <div class="avatar">AM</div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Prediction engine / exact date</div>
+              <h1>Promise the date<br /><span>you can deliver.</span></h1>
+              <p>
+                Combine route conditions, port closures, inventory, carrier capacity, and
+                historical performance to calculate one exact delivery date.
+              </p>
+            </div>
+            <button class="primary" id="refresh">↻ Refresh predictions</button>
+          </div>
+          <section class="panel prediction-card">
+            <div class="panel-label">CALCULATE AN EXACT DELIVERY DATE</div>
+            <h2>Shipment prediction</h2>
+            <div class="prediction-form">
+              <label>Shipment database ID<input id="shipment" type="number" min="1" value="1" /></label>
+              <label
+                >Origin<select id="origin">
+                  <option>Mumbai Port</option>
+                  <option>Mundra Port</option>
+                </select></label
+              >
+              <label
+                >Destination<select id="destination">
+                  <option>Delhi NCR</option>
+                  <option>Pune</option>
+                  <option>Bengaluru</option>
+                </select></label
+              >
+              <button class="primary" id="predict">Predict exact date →</button>
+            </div>
+          </section>
+          <div class="prediction-result visible" id="prediction-result">
+            <section class="exact-date">
+              <div class="panel-label">PREDICTED DELIVERY DATE</div>
+              <h2 id="result-title">LT-20481 · Mumbai to Delhi NCR</h2>
+              <strong id="result-date">26 September 2026</strong>
+              <p id="result-copy">
+                Delivery is predicted for the exact calendar date above, subject to the
+                current Mumbai port closure scenario.
+              </p>
+              <div class="date-meta">
+                <div><span>Dispatch date</span><b>22 Sep 2026</b></div>
+                <div><span>Transit time</span><b>4d 06h</b></div>
+                <div><span>Route</span><b>Mundra + rail</b></div>
+              </div>
+            </section>
+            <section class="panel confidence-card">
+              <div class="panel-label">MODEL CONFIDENCE</div>
+              <h2>Why this date is reliable</h2>
+              <div class="confidence-score">
+                <strong>93.8%</strong> <span>High confidence</span>
+              </div>
+              <div class="bar"><i style="width: 94%"></i></div>
+              <div class="check-list">
+                <div><span>Route capacity confirmed</span><b>✓</b></div>
+                <div><span>Inventory available</span><b>✓</b></div>
+                <div><span>Disruption included</span><b>✓</b></div>
+                <div><span>Carrier history match</span><b>✓</b></div>
+              </div>
+            </section>
+          </div>
+          <div class="section">
+            <div class="eyebrow">Active shipment predictions</div>
+            <h2>Exact dates across the network</h2>
+            <div class="panel table-wrap">
+              <table class="table predict-table">
+                <thead>
+                  <tr>
+                    <th>Shipment</th>
+                    <th>Destination</th>
+                    <th>Exact delivery date</th>
+                    <th>Confidence</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-search="LT-20481 Delhi NCR Mumbai">
+                    <td><strong>LT-20481</strong><small>Medical devices</small></td>
+                    <td>Delhi NCR</td>
+                    <td>26 Sep 2026 · 18:00</td>
+                    <td>93.8%</td>
+                    <td><span class="status good">Protected</span></td>
+                  </tr>
+                  <tr data-search="LT-20492 Bengaluru Mumbai">
+                    <td><strong>LT-20492</strong><small>Consumer electronics</small></td>
+                    <td>Bengaluru</td>
+                    <td>28 Sep 2026 · 12:00</td>
+                    <td>89.4%</td>
+                    <td><span class="status watch">Monitoring</span></td>
+                  </tr>
+                  <tr data-search="LT-20504 Hyderabad Mumbai">
+                    <td><strong>LT-20504</strong><small>Cold-chain kits</small></td>
+                    <td>Hyderabad</td>
+                    <td>27 Sep 2026 · 09:30</td>
+                    <td>91.1%</td>
+                    <td><span class="status good">Protected</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="footer">
+            <span>Prediction engine refreshed 06:10 UTC</span>
+            <span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/delivery-predict.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Demand | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Planning</span><b>›</b><strong>Demand signals</strong>
+          </div>
+          <div class="top-actions"><div class="avatar">AM</div></div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Demand signals / 14 day view</div>
+              <h1>Know what each<br /><span>node needs next.</span></h1>
+              <p>
+                Demand sensing combines order velocity, inventory cover, and disruption
+                exposure to protect the items customers need most.
+              </p>
+            </div>
+            <button class="primary" id="simulate">↗ Refresh forecast</button>
+          </div>
+          <div class="kpis">
+            <div class="kpi dark">
+              <label>FORECAST CONFIDENCE</label><strong>91%</strong
+              ><small>18 signals connected</small>
+            </div>
+            <div class="kpi mint">
+              <label>PEAK DEMAND SIGNAL</label><strong>+42%</strong
+              ><small>Insulin pens · Delhi NCR</small>
+            </div>
+            <div class="kpi coral">
+              <label>CRITICAL ITEMS</label><strong>01</strong
+              ><small>Below 7 days cover</small>
+            </div>
+            <div class="kpi blue">
+              <label>NETWORK COVER</label><strong>11.4d</strong
+              ><small>Weighted average</small>
+            </div>
+          </div>
+          <div class="section">
+            <div class="eyebrow">Priority items</div>
+            <h2>What needs attention next</h2>
+            <div class="activity">
+              <div class="activity-card">
+                <span class="status risk">Critical</span><strong>Insulin pens</strong
+                ><small>Delhi NCR · +42% demand · 5.8 days cover</small>
+                <div class="bar coral"><i style="width: 86%"></i></div>
+              </div>
+              <div class="activity-card">
+                <span class="status watch">Elevated</span><strong>Lithium cells</strong
+                ><small>Bengaluru · +28% demand · 9.2 days cover</small>
+                <div class="bar"><i style="width: 67%"></i></div>
+              </div>
+              <div class="activity-card">
+                <span class="status good">Balanced</span><strong>Cold-chain kits</strong
+                ><small>Pune · +19% demand · 13.4 days cover</small>
+                <div class="bar"><i style="width: 49%"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="eyebrow">City inventory outlook</div>
+            <h2>Where supply will tighten first.</h2>
+            <div class="panel table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>City</th>
+                    <th>Top item</th>
+                    <th>Demand</th>
+                    <th>Coverage</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Delhi NCR</strong></td>
+                    <td>Insulin pens</td>
+                    <td>+42%</td>
+                    <td>5.8 days</td>
+                    <td>Reserve Mundra rail capacity</td>
+                    <td><span class="status risk">Critical</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bengaluru</strong></td>
+                    <td>Lithium cells</td>
+                    <td>+28%</td>
+                    <td>9.2 days</td>
+                    <td>Pull forward 3 loads</td>
+                    <td><span class="status watch">Elevated</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pune</strong></td>
+                    <td>Cold-chain kits</td>
+                    <td>+19%</td>
+                    <td>13.4 days</td>
+                    <td>Maintain safety stock</td>
+                    <td><span class="status good">Balanced</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="footer">
+            <span>Forecasts refresh every 6 hours</span
+            ><span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/demand.js"></script>
+</body>
+</html>

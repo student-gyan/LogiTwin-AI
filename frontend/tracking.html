@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tracking | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Operations</span><b>›</b><strong>Tracking</strong>
+          </div>
+          <div class="top-actions">
+            <label class="search"
+              ><input id="search" placeholder="Search shipments..."
+            /></label>
+            <div class="avatar">AM</div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Order visibility / live</div>
+              <h1>Every delivery.<br /><span>One clear answer.</span></h1>
+              <p>
+                Track orders, exceptions, and service windows across the affected Mumbai
+                inland network.
+              </p>
+            </div>
+            <button class="primary" id="simulate">↻ Refresh tracking</button>
+          </div>
+          <div class="kpis">
+            <div class="kpi dark">
+              <label>ACTIVE SHIPMENTS</label><strong>1,284</strong
+              ><small>99.2% tracking coverage</small>
+            </div>
+            <div class="kpi mint">
+              <label>ON TRACK</label><strong>1,246</strong
+              ><small>96.9% of active loads</small>
+            </div>
+            <div class="kpi coral">
+              <label>AT RISK</label><strong>38</strong
+              ><small>4 critical · 34 watch</small>
+            </div>
+            <div class="kpi blue">
+              <label>WORST DELAY</label><strong>+4d</strong
+              ><small>Bengaluru inbound</small>
+            </div>
+          </div>
+          <div class="grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">SHIPMENT QUEUE</div>
+                  <h2>Orders needing attention</h2>
+                </div>
+              </div>
+              <div class="report-row" data-search="LT-20481 Pune critical">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>LT-20481 · Pune</strong
+                  ><small>Medical devices · Mundra alternate hub</small>
+                </div>
+                <span class="status risk">+2d 04h</span>
+              </div>
+              <div class="report-row" data-search="LT-20492 Bengaluru watch">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>LT-20492 · Bengaluru</strong
+                  ><small>Consumer electronics · Rail connection</small>
+                </div>
+                <span class="status watch">+1d 18h</span>
+              </div>
+              <div class="report-row" data-search="LT-20504 Delhi critical">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>LT-20504 · Delhi NCR</strong
+                  ><small>Cold-chain kits · Road / rail</small>
+                </div>
+                <span class="status risk">+1d 22h</span>
+              </div>
+              <div class="report-row" data-search="LT-20511 Hyderabad watch">
+                <div class="file-icon">▣</div>
+                <div class="report-main">
+                  <strong>LT-20511 · Hyderabad</strong
+                  ><small>Industrial parts · Road</small>
+                </div>
+                <span class="status watch">+1d 14h</span>
+              </div>
+            </section>
+            <section class="panel recommend">
+              <div class="panel-label">LIVE EXCEPTIONS</div>
+              <h2>Network alert</h2>
+              <p>
+                Mumbai port closure has been propagated to 38 shipments. Priority orders
+                are protected first through Mundra and rail capacity.
+              </p>
+              <button class="primary" id="approve">Open mitigation plan →</button>
+            </section>
+          </div>
+          <div class="footer">
+            <span>Tracking data refreshes every 5 minutes</span
+            ><span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/tracking.js"></script>
+</body>
+</html>

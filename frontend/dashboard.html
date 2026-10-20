@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Operations</span><b>›</b><strong>Network overview</strong>
+          </div>
+          <div class="top-actions">
+            <label class="search"
+              ><input id="search" placeholder="Search lanes, items..."
+            /></label>
+            <a class="role-login" href="login.html">
+              <span>⇥</span><strong>Role login</strong>
+            </a>
+            <div class="avatar">AM</div>
+            <div class="user">
+              <strong>Alex Morgan</strong><small id="role-label">Network lead</small>
+            </div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="banner">
+            <strong>● Scenario active</strong
+            ><span>Mumbai port closed for 48 hours · inland road routes impacted</span
+            ><button id="acknowledge">Acknowledge</button>
+          </div>
+          <div class="hero">
+            <div>
+              <div class="eyebrow">Network pulse / live</div>
+              <h1>Stay ahead of the next<br /><span>constraint.</span></h1>
+              <p>
+                Logi Twin maps your physical network in real time, then turns disruption
+                signals into the lowest-loss move before service levels slip.
+              </p>
+              <div class="actions">
+                <button class="primary" id="simulate">↯ Run route simulation →</button
+                ><a class="secondary" href="reports.html">Explore reports</a>
+              </div>
+            </div>
+            <div class="health-card">
+              <div class="health-head">
+                <span>NETWORK HEALTH</span><strong>● LIVE</strong>
+              </div>
+              <div class="health">
+                <div><strong>94.6%</strong><small>service level protected</small></div>
+                <svg width="110" height="38" viewBox="0 0 110 38">
+                  <path
+                    d="M1 31 C12 30 18 25 25 28 S38 20 46 23 S56 19 65 20 S78 13 87 16 S98 8 109 7"
+                    fill="none"
+                    stroke="#45ca91"
+                    stroke-width="2.5"
+                  />
+                </svg>
+              </div>
+              <div class="health-foot">
+                <span>vs. baseline</span><strong>↘ 2.8% delay exposure</strong>
+              </div>
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric">
+              <span class="metric-label">Shipments in motion</span><strong>1,284</strong
+              ><small>+8.4% vs. last 7 days</small>
+              <div class="bar"><i style="width: 78%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="metric-label">At-risk deliveries</span><strong>38</strong
+              ><small>4 critical · 34 watch</small>
+              <div class="bar coral"><i style="width: 32%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Available capacity</span><strong>72%</strong
+              ><small>Across 27 active lanes</small>
+              <div class="bar"><i style="width: 72%"></i></div>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Avoided loss</span><strong>$248k</strong
+              ><small>Through AI interventions</small>
+              <div class="bar"><i style="width: 64%"></i></div>
+            </div>
+          </div>
+          <div class="grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">● REAL-TIME NETWORK</div>
+                  <h2>Where your flow is moving</h2>
+                </div>
+                <button class="outline">Filters⌄</button>
+              </div>
+              <div class="map">
+                <svg viewBox="0 0 620 310" preserveAspectRatio="none">
+                  <path
+                    class="route-main"
+                    d="M92 102 C164 164 200 215 286 190 S420 212 555 238"
+                  />
+                  <path
+                    class="route-alt"
+                    d="M252 95 C285 126 324 150 366 166 S450 187 555 238"
+                  />
+                </svg>
+                <div class="node node-a">
+                  <strong>Mumbai</strong><small>48h closure</small>
+                </div>
+                <div class="node node-b">
+                  <strong>Delhi NCR</strong><small>On track</small>
+                </div>
+                <div class="node node-c">
+                  <strong>Mundra</strong><small>+1d buffer</small>
+                </div>
+                <div class="node node-d">
+                  <strong>Pune</strong><small>23 loads</small>
+                </div>
+                <div class="node node-e">
+                  <strong>Bengaluru</strong><small>Demand spike</small>
+                </div>
+              </div>
+            </section>
+            <section class="panel recommend">
+              <div class="panel-label">↯ TWIN RECOMMENDATION</div>
+              <h2>Lowest-loss move</h2>
+              <p>
+                Divert 14 shipments from Mumbai to Mundra, then use rail connections to
+                Pune, Delhi NCR, and Bengaluru.
+              </p>
+              <div class="recommend-stats">
+                <div>
+                  <span>Delay</span><strong>+2d 04h</strong
+                  ><small>down from +6d 12h</small>
+                </div>
+                <div>
+                  <span>Cost</span><strong>$18.4k</strong
+                  ><small>82% below expedite all</small>
+                </div>
+                <div>
+                  <span>Protected</span><strong>4,820</strong
+                  ><small>critical units</small>
+                </div>
+              </div>
+              <button class="primary" id="approve">Approve route plan ✓</button>
+            </section>
+          </div>
+          <div class="section" id="routes">
+            <div class="eyebrow">City-by-city delivery effect</div>
+            <h2>Mumbai port closure · 48 hour scenario</h2>
+            <div class="panel table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>City</th>
+                    <th>Orders</th>
+                    <th>Estimated delay</th>
+                    <th>Alternate hub</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Mumbai</strong><small>MH · port city</small></td>
+                    <td>2,180</td>
+                    <td>+2d 20h</td>
+                    <td>Mundra</td>
+                    <td><span class="status risk">Critical</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pune</strong><small>MH · west region</small></td>
+                    <td>1,460</td>
+                    <td>+3d 02h</td>
+                    <td>Mundra via Nashik</td>
+                    <td><span class="status watch">Watch</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hyderabad</strong><small>TS · south-central</small></td>
+                    <td>760</td>
+                    <td>+3d 14h</td>
+                    <td>Mundra + NH48</td>
+                    <td><span class="status risk">Critical</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Bengaluru</strong><small>KA · south region</small></td>
+                    <td>1,020</td>
+                    <td>+4d 00h</td>
+                    <td>Chennai + rail</td>
+                    <td><span class="status risk">Critical</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Delhi NCR</strong><small>DL · north region</small></td>
+                    <td>1,180</td>
+                    <td>+3d 02h</td>
+                    <td>Mundra rail</td>
+                    <td><span class="status watch">Watch</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="section" id="demand">
+            <div class="eyebrow">Demand sensing</div>
+            <h2>What needs attention next</h2>
+            <div class="activity">
+              <div class="activity-card">
+                <span class="status risk">Critical</span><strong>Insulin pens</strong
+                ><small>Delhi NCR · demand signal +42% · 5.8 days cover</small>
+              </div>
+              <div class="activity-card">
+                <span class="status watch">Elevated</span><strong>Lithium cells</strong
+                ><small>Bengaluru · demand signal +28% · 9.2 days cover</small>
+              </div>
+              <div class="activity-card">
+                <span class="status good">Balanced</span><strong>Cold-chain kits</strong
+                ><small>Pune · demand signal +19% · 13.4 days cover</small>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <span>Connected to 18 live data feeds</span
+            ><span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

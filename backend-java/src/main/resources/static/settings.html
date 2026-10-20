@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Settings | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb"><span>Workspace</span><b>›</b><strong>Settings</strong></div>
+          <div class="top-actions">
+            <div class="avatar">AM</div>
+            <div class="user">
+              <strong>Alex Morgan</strong><small>Network lead</small>
+            </div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Workspace configuration</div>
+              <h1>Make the twin<br /><span>work your way.</span></h1>
+              <p>
+                Configure operational rules, connected data feeds, alert thresholds, and
+                access for your supply chain team.
+              </p>
+            </div>
+            <button class="primary" id="save">▣ Save changes</button>
+          </div>
+          <div class="tabs">
+            <button class="active">General</button><button>Rules & alerts</button
+            ><button>Integrations</button><button>Team access</button>
+          </div>
+          <div class="settings-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">GENERAL</div>
+                  <h2>Control tower preferences</h2>
+                </div>
+              </div>
+              <div class="settings-field">
+                <div>
+                  <strong>Workspace name</strong
+                  ><small>Shown in the sidebar and exported reports.</small>
+                </div>
+                <input value="Northstar Supply" />
+              </div>
+              <div class="settings-field">
+                <div>
+                  <strong>Operating region</strong
+                  ><small>Used to localize time, currency, and reporting.</small>
+                </div>
+                <select>
+                  <option>India Standard Time</option>
+                  <option>UTC</option>
+                </select>
+              </div>
+              <div class="settings-field">
+                <div>
+                  <strong>Planning horizon</strong
+                  ><small>Default window for demand and route projections.</small>
+                </div>
+                <select>
+                  <option>14 days</option>
+                  <option>30 days</option>
+                </select>
+              </div>
+              <div class="settings-field">
+                <div>
+                  <strong>Default loss objective</strong
+                  ><small>The twin ranks recommendations by this objective.</small>
+                </div>
+                <select>
+                  <option>Lowest delivery loss</option>
+                  <option>Shortest delivery time</option>
+                </select>
+              </div>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">LIVE CONTROLS</div>
+                  <h2>Automation rules</h2>
+                </div>
+              </div>
+              <div class="rule">
+                <div class="rule-icon">↗</div>
+                <div>
+                  <strong>Auto-reroute critical loads</strong
+                  ><small>Suggest a route when delay exceeds 24h.</small>
+                </div>
+                <button class="toggle on"><i></i></button>
+              </div>
+              <div class="rule">
+                <div class="rule-icon">♧</div>
+                <div>
+                  <strong>Disruption notifications</strong
+                  ><small>Send alerts for new network incidents.</small>
+                </div>
+                <button class="toggle on"><i></i></button>
+              </div>
+              <div class="rule">
+                <div class="rule-icon">⌁</div>
+                <div>
+                  <strong>Demand surge alerts</strong
+                  ><small>Notify when demand rises above 20%.</small>
+                </div>
+                <button class="toggle"><i></i></button>
+              </div>
+            </section>
+          </div>
+          <div class="integration">
+            <div class="file-icon">↔</div>
+            <div>
+              <strong>18 live integrations connected</strong
+              ><small
+                >ERP, carrier, GPS, port, weather, and demand feeds are healthy.</small
+              >
+            </div>
+            <span class="status good">All healthy</span
+            ><button class="outline">Manage integrations →</button>
+          </div>
+          <div class="security-grid">
+            <div class="security">
+              <div>⌑</div>
+              <div>
+                <strong>Security</strong
+                ><small
+                  >SSO and data permissions are managed by your administrator.</small
+                >
+              </div>
+              →
+            </div>
+            <div class="security">
+              <div>♙</div>
+              <div>
+                <strong>Team access</strong
+                ><small>6 planners and 2 executives have access.</small>
+              </div>
+              →
+            </div>
+            <div class="security">
+              <div>✉</div>
+              <div>
+                <strong>Contact support</strong
+                ><small>Need help with a connector or model rule?</small>
+              </div>
+              →
+            </div>
+          </div>
+          <div class="notice">
+            ✓ <span>All settings are saved automatically</span><button>Dismiss</button>
+          </div>
+          <div class="footer">
+            <span>Settings apply to this workspace only</span
+            ><span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Disruption Control | Logi Twin AI</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb">
+            <span>Operations</span><b>›</b>
+            <strong>Disruption control</strong>
+          </div>
+          <div class="top-actions">
+            <label class="search">
+              <input id="search" placeholder="Search incidents..." />
+            </label>
+            <div class="avatar">AM</div>
+          </div>
+        </header>
+        <section class="page">
+          <div class="page-head">
+            <div>
+              <div class="eyebrow">Disruption control / live</div>
+              <h1>Turn disruption<br /><span>into a decision.</span></h1>
+              <p>
+                Monitor network incidents, understand delivery impact, and approve the
+                lowest-loss response before customer service levels slip.
+              </p>
+            </div>
+            <button class="primary" id="simulate">↻ Recalculate impact</button>
+          </div>
+          <div class="kpis">
+            <div class="kpi dark">
+              <label>ACTIVE INCIDENTS</label> <strong>04</strong
+              ><small>1 critical · 3 watch</small>
+            </div>
+            <div class="kpi coral">
+              <label>ORDERS IMPACTED</label> <strong>5,420</strong
+              ><small>Across 12 inland cities</small>
+            </div>
+            <div class="kpi mint">
+              <label>PROTECTED ORDERS</label> <strong>4,820</strong
+              ><small>89% protected by twin actions</small>
+            </div>
+            <div class="kpi blue">
+              <label>AVG. RECOVERY</label> <strong>2.4d</strong
+              ><small>Down from 5.8 days</small>
+            </div>
+          </div>
+          <div class="workspace-grid">
+            <section class="panel">
+              <div class="panel-head">
+                <div>
+                  <div class="panel-label">INCIDENT QUEUE</div>
+                  <h2>Active network disruptions</h2>
+                </div>
+                <button class="outline">Filter⌄</button>
+              </div>
+              <div class="report-row" data-search="Mumbai port closure critical">
+                <div class="file-icon">!</div>
+                <div class="report-main">
+                  <strong>Mumbai port closure</strong>
+                  <small>Port operations · 48 hours · 5,420 orders</small>
+                </div>
+                <span class="status risk">Critical</span>
+              </div>
+              <div class="report-row" data-search="NH48 traffic watch">
+                <div class="file-icon">!</div>
+                <div class="report-main">
+                  <strong>NH48 traffic restriction</strong>
+                  <small>Mumbai–Pune corridor · 14 hours · 620 orders</small>
+                </div>
+                <span class="status watch">Watch</span>
+              </div>
+              <div class="report-row" data-search="Bengaluru weather watch">
+                <div class="file-icon">!</div>
+                <div class="report-main">
+                  <strong>Bengaluru weather delay</strong>
+                  <small>Airport cargo · 8 hours · 180 orders</small>
+                </div>
+                <span class="status watch">Watch</span>
+              </div>
+            </section>
+            <section class="panel recommend">
+              <div class="panel-label">TWIN RESPONSE</div>
+              <h2>Lowest-loss response</h2>
+              <p>
+                Split affected Mumbai loads through Mundra and allocate rail capacity to
+                priority cities with low inventory cover.
+              </p>
+              <div class="recommend-stats">
+                <div><span>Orders protected</span><strong>4,820</strong></div>
+                <div><span>Delay reduced</span><strong>4.2d</strong></div>
+                <div><span>Loss avoided</span><strong>$248k</strong></div>
+              </div>
+              <button class="primary" id="approve">Approve response ✓</button>
+            </section>
+          </div>
+          <div class="footer">
+            <span>Incident model refreshed 06:10 UTC</span>
+            <span>© 2026 Northstar Supply Systems</span>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/disruptions.js"></script>
+</body>
+</html>
