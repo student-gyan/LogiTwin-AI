@@ -1,4 +1,4 @@
--- Logi Twin AI complete MySQL database
+cd backend-javacd backend-java-- Logi Twin AI complete MySQL database
 -- MySQL 8.0+
 -- Covers users, roles, hubs, routes, shipments, disruptions,
 -- inventory, demand forecasts, exact delivery predictions,
